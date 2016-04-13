@@ -7,7 +7,7 @@ import java.util.*;
  */
 public class Theater {
     private final String theaterName;
-    private List<Seat> seats = new LinkedList<>();
+    public List<Seat> seats = new LinkedList<>();
 
     public Theater(String theaterName, int numRows, int seatPerRow) {
         this.theaterName = theaterName;
@@ -20,6 +20,7 @@ public class Theater {
                 this.seats.add(seat);
             }
         }
+        // this.seats.sort(null); no need as its been added in sorted order
     }
 
     public String getTheaterName() {
@@ -47,7 +48,7 @@ public class Theater {
     }
 
 
-    private class Seat implements Comparable<Seat>{
+    public class Seat implements Comparable<Seat>{
         private final String seatNumber;
         private boolean reserved = false;
 
