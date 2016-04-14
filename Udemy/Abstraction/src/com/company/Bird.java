@@ -3,7 +3,7 @@ package com.company;
 /**
  * Created by arun on 4/14/16.
  */
-public abstract class Bird extends Animal {
+public abstract class Bird extends Animal implements CanFly{
 
     public Bird(String name){
         super(name);
@@ -19,5 +19,8 @@ public abstract class Bird extends Animal {
         System.out.println("Bird: breathe in, breathe out, repeat ");
     }
 
-    public abstract void fly();
+    @Override
+    public void fly(){
+        System.out.println(this.getName()+ " Flapping wings");
+    }
 }
