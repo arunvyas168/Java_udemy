@@ -14,6 +14,19 @@ public class Main {
         }
         myLinkedList.traverse(myLinkedList.getRoot());
         System.out.println("###############################");
+        myLinkedList.removeItems(new Node("Arun"));
+        myLinkedList.traverse(myLinkedList.getRoot());
+        System.out.println("###############################");
+        myLinkedList.removeItems(new Node("Adelaide"));
+        myLinkedList.traverse(myLinkedList.getRoot());
+        System.out.println("###############################");
+        myLinkedList.removeItems(new Node("Perth"));
+        myLinkedList.traverse(myLinkedList.getRoot());
+        System.out.println("###############################");
+        myLinkedList.removeItems(new Node("Sydney"));
+        myLinkedList.traverse(myLinkedList.getRoot());
+        System.out.println("###############################");
+
         /*myLinkedList.ReverseTraverse(myLinkedList.getRoot());*/
     }
 }

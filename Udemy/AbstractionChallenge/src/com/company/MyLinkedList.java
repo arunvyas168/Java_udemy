@@ -62,15 +62,22 @@ public class MyLinkedList implements NodeList{
         if(items == null){
             return false;
         }
+        if (this.root.compareToListItem(items)==0){
+            this.root = this.root.nextRight();
+        }
         ListItems currentItems = this.root;
         while (currentItems != null){
-            if (currentItems.compareToListItem(items)!=0){
-                currentItems = currentItems.nextRight();
-            } else{
-                ListItems previous = currentItems.previuosLeft();
-                previous.setNextOrRight(items);
-                items.setNextOrRight(currentItems.nextRight());
+
+            if (currentItems.compareToListItem(items)==0){
+
+                if (currentItems.nextRight()!=null) {
+                    currentItems.nextRight().setPreviousOrLeft(currentItems.previuosLeft());
+                }
+                currentItems.previuosLeft().setNextOrRight(currentItems.nextRight());
                 return true;
+
+            } else{
+                currentItems = currentItems.nextRight();
             }
         }
         return false;
