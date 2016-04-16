@@ -26,6 +26,19 @@ public class Main {
         myLinkedList.removeItems(new Node("Sydney"));
         myLinkedList.traverse(myLinkedList.getRoot());
         System.out.println("###############################");
+        myLinkedList.removeItems(new Node("Brisbane"));
+        myLinkedList.traverse(myLinkedList.getRoot());
+        System.out.println("###############################");
+        myLinkedList.removeItems(new Node("Darwin"));
+        myLinkedList.traverse(myLinkedList.getRoot());
+        System.out.println("###############################");
+        myLinkedList.removeItems(new Node("Melbourne"));
+        myLinkedList.traverse(myLinkedList.getRoot());
+        System.out.println("###############################");
+        myLinkedList.removeItems(new Node("Canberra"));
+        myLinkedList.traverse(myLinkedList.getRoot());
+        System.out.println("###############################");
+
 
         /*myLinkedList.ReverseTraverse(myLinkedList.getRoot());*/
     }
