@@ -39,7 +39,19 @@ public class Main {
         myLinkedList.traverse(myLinkedList.getRoot());
         System.out.println("###############################");
 
-
         /*myLinkedList.ReverseTraverse(myLinkedList.getRoot());*/
+
+        SearchTree tree = new SearchTree(null);
+        for (String s : data){
+            //System.out.println("Adding: "+s);
+            tree.addItems(new Node(s));
+        }
+        tree.traverse(tree.getRoot());
+
+        tree.removeItems(new Node("Darwin"));
+        System.out.println("###############################");
+        tree.traverse(tree.getRoot());
+
+
     }
 }
